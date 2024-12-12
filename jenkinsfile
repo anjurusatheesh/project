@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image with the tag 'httpd'
-                    sh "docker build -t httpd ."
+                    sh "docker build -t  httpd ."
                 }
             }
         }
