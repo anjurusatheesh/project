@@ -26,24 +26,6 @@ pipeline {
                 }
             }
         }
-
-        // Stage to push changes back to Git repository (if needed)
-        stage('Git Push') {
-            steps {
-                script {
-                    // Configure Git user (needed if running on a CI environment without a global config)
-                    sh "git config user.name 'anjurusatheesh'"
-                    sh "git config user.email 'anjurusatheesh@gmail.com'"
-
-                    // Add changes (if any) and commit
-                    sh "git add ."
-                    sh "git commit -m 'Automated commit from Jenkins pipeline after Docker build and run'"
-
-                    // Push changes back to the repository
-                    sh "git push https://github.com/anjurusatheesh/project.git main"
-                }
-            }
-        }
     }
 }
 
