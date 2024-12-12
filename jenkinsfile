@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Git Clone repository') {
             steps {
-                // Clone the repository from GitHub and checkout the 'main' branch
                 git url: 'https://github.com/anjurusatheesh/project.git', branch: 'main'
             }
         }
